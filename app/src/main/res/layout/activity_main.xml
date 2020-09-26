@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="消息" />
+
+        <Button
+            android:id="@+id/btn_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="选择" />
+
+        <Button
+            android:id="@+id/btn_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="输入" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_wait"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="等待" />
+
+        <Button
+            android:id="@+id/btn_wait_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="等待提示" />
+
+        <Button
+            android:id="@+id/btn_wait_warning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="警告" />
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_bottom_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="底部菜单" />
+
+        <Button
+            android:id="@+id/btn_bottom_menu_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="底部菜单标题" />
+
+        <Button
+            android:id="@+id/btn_wait_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="错误" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="分享" />
+
+        <Button
+            android:id="@+id/btn_vermsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="纵向消息"/>
+
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
