@@ -206,6 +206,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.btn_wait_error:
+                //错误
                 TipDialog.show(MainActivity.this, "错误", TipDialog.TYPE.ERROR).setTipTime(2500).setOnDismissListener(new OnDismissListener() {
                     @Override
                     public void onDismiss() {
