@@ -14,9 +14,11 @@ gradle接入
 	        implementation 'com.github.jkdsking:IosPopup:1.0.1'
 	}
  
-  具体使用Application里面
-             
-	     public class App extends Application {
+  
+  注意：目前不支持横竖屏幕切换显示
+  
+  具体使用Application里面             
+public class App extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
@@ -30,9 +32,9 @@ gradle接入
     }
       
       
-   弹窗使用 具体代码  
+  弹窗使用 具体代码  
   	 	
-		  //消息
+		                  //消息
                 MessageDialog.show(MainActivity.this, "标题", "这是一条消息", "确定").setOnOkButtonClickListener(new OnDialogButtonClickListener() {
                     @Override
                     public boolean onClick(BaseDialog baseDialog, View v) {
@@ -41,10 +43,9 @@ gradle接入
                     }
                 });
 		 
-		 //纵向消息
-                MessageDialog
-                        .show(MainActivity.this, "纵向排列", "这是一条纵向消息", "确定", "取消", "其他")
-                        .setButtonOrientation(LinearLayout.VERTICAL).setOnOkButtonClickListener(new OnDialogButtonClickListener() {
+		                //纵向消息
+                MessageDialog.show(MainActivity.this, "纵向排列", "这是一条纵向消息", "确定", "取消", "其他")
+                     .setButtonOrientation(LinearLayout.VERTICAL).setOnOkButtonClickListener(new OnDialogButtonClickListener() {
                     @Override
                     public boolean onClick(BaseDialog baseDialog, View v) {
                         Toast.makeText(MainActivity.this, "点击确定", Toast.LENGTH_SHORT).show();
@@ -58,7 +59,7 @@ gradle接入
                     }
                 });
 		    
-		    //选择
+		              //选择
 		  MessageDialog.show(MainActivity.this, "标题", "你要做什么事", "确定", "取消").setOnOkButtonClickListener(new OnDialogButtonClickListener() {
                     @Override
                     public boolean onClick(BaseDialog baseDialog, View v) {
@@ -68,7 +69,7 @@ gradle接入
                     }
                 });
                   
-		  //输入
+		             //输入
                 InputDialog.build(MainActivity.this)
                         //.setButtonTextInfo(new TextInfo().setFontColor(Color.GREEN))
                         .setTitle("提示").setMessage("请输入密码（123456）")
