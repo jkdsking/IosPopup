@@ -17,8 +17,13 @@ gradle接入
   
   注意：目前不支持横竖屏幕切换显示
   
+  
+  
+  
+  
   具体使用Application里面             
-public class App extends Application {
+    
+    public class App extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
