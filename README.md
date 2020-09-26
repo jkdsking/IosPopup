@@ -15,15 +15,16 @@ gradle接入
 	}
  
   具体使用：
-//消息 
-  MessageDialog.show(MainActivity.this, "标题", "这是一条消息", "确定").setOnOkButtonClickListener(new OnDialogButtonClickListener() {
+  	 	
+		//消息
+                MessageDialog.show(MainActivity.this, "标题", "这是一条消息", "确定").setOnOkButtonClickListener(new OnDialogButtonClickListener() {
                     @Override
                     public boolean onClick(BaseDialog baseDialog, View v) {
                         Toast.makeText(MainActivity.this, "点击确定", Toast.LENGTH_SHORT).show();
                         return false;
                     }
                 });
-  //纵向消息
+		 //纵向消息
                 MessageDialog
                         .show(MainActivity.this, "纵向排列", "这是一条纵向消息", "确定", "取消", "其他")
                         .setButtonOrientation(LinearLayout.VERTICAL).setOnOkButtonClickListener(new OnDialogButtonClickListener() {
@@ -39,8 +40,7 @@ gradle接入
                         return false;
                     }
                 });
-                 //选择
-                MessageDialog.show(MainActivity.this, "标题", "你要做什么事", "确定", "取消").setOnOkButtonClickListener(new OnDialogButtonClickListener() {
+		  MessageDialog.show(MainActivity.this, "标题", "你要做什么事", "确定", "取消").setOnOkButtonClickListener(new OnDialogButtonClickListener() {
                     @Override
                     public boolean onClick(BaseDialog baseDialog, View v) {
 
