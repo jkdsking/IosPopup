@@ -14,7 +14,23 @@ gradle接入
 	        implementation 'com.github.jkdsking:IosPopup:1.0.1'
 	}
  
-  具体使用：
+  具体使用Application里面
+             
+	     public class App extends Application {
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        DialogSettings.init();
+    }
+
+    @Override
+    public void onTerminate() {
+        BaseDialog.unload();
+        super.onTerminate();
+    }
+      
+      
+   弹窗使用 具体代码  
   	 	
 		  //消息
                 MessageDialog.show(MainActivity.this, "标题", "这是一条消息", "确定").setOnOkButtonClickListener(new OnDialogButtonClickListener() {
