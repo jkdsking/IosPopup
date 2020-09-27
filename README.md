@@ -15,7 +15,7 @@ gradle接入
 	}
  
   
-  注意：目前不支持横竖屏幕切换显示
+  注意：目前不支持横竖屏幕切换显示   activity必须要继承AppCompatActivity
   
   
   
