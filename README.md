@@ -1,6 +1,7 @@
 # IosPopup
 Ios样式弹窗
 首先感谢源库 https://github.com/kongzue/DialogV3 
+
 ![image](https://github.com/jkdsking/IosPopup/blob/master/png/main.jpg)![image](https://github.com/jkdsking/IosPopup/blob/master/png/message.jpg)![image](https://github.com/jkdsking/IosPopup/blob/master/png/message_ver.jpg)![image](https://github.com/jkdsking/IosPopup/blob/master/png/select.jpg)![image](https://github.com/jkdsking/IosPopup/blob/master/png/input.jpg)![image](https://github.com/jkdsking/IosPopup/blob/master/png/wait.jpg)![image](https://github.com/jkdsking/IosPopup/blob/master/png/warn.jpg)![image](https://github.com/jkdsking/IosPopup/blob/master/png/buttom.jpg)![image](https://github.com/jkdsking/IosPopup/blob/master/png/buttom_menu.jpg)![image](https://github.com/jkdsking/IosPopup/blob/master/png/error.jpg)![image](https://github.com/jkdsking/IosPopup/blob/master/png/share.jpg)
 gradle接入
 
@@ -173,4 +174,20 @@ gradle接入
                         return false;
                     }
                 });
-                
+        
+## 开源协议
+```
+Copyright Kongzue DialogV3
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+```        
