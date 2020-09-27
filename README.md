@@ -1,10 +1,12 @@
 # IosPopup
 Ios样式弹窗
-首先感谢源库 https://github.com/kongzue/DialogV3 
+
+## 首先感谢源库 https://github.com/kongzue/DialogV3 
 
 ![image](https://github.com/jkdsking/IosPopup/blob/master/png/main.jpg)![image](https://github.com/jkdsking/IosPopup/blob/master/png/message.jpg)![image](https://github.com/jkdsking/IosPopup/blob/master/png/message_ver.jpg)![image](https://github.com/jkdsking/IosPopup/blob/master/png/select.jpg)![image](https://github.com/jkdsking/IosPopup/blob/master/png/input.jpg)![image](https://github.com/jkdsking/IosPopup/blob/master/png/wait.jpg)![image](https://github.com/jkdsking/IosPopup/blob/master/png/warn.jpg)![image](https://github.com/jkdsking/IosPopup/blob/master/png/buttom.jpg)![image](https://github.com/jkdsking/IosPopup/blob/master/png/buttom_menu.jpg)![image](https://github.com/jkdsking/IosPopup/blob/master/png/error.jpg)![image](https://github.com/jkdsking/IosPopup/blob/master/png/share.jpg)
-gradle接入
-
+ 
+   ## gradle接入
+	
 	allprojects {
 		repositories {
 			...
@@ -17,11 +19,10 @@ gradle接入
 	}
  
   
-  注意：目前不支持横竖屏幕切换显示   activity必须要继承AppCompatActivity
+ ## 注意：目前不支持横竖屏幕切换显示   activity必须要继承AppCompatActivity
 
   
-  具体使用Application里面             
-    
+  ## 具体使用Application里面           
     public class App extends Application {
     @Override
     public void onCreate() {
@@ -36,7 +37,8 @@ gradle接入
     }
       
       
-  弹窗使用 具体代码  
+  ## 弹窗使用 具体代码
+```  
   	 	
 		                  //消息
                 MessageDialog.show(MainActivity.this, "标题", "这是一条消息", "确定").setOnOkButtonClickListener(new OnDialogButtonClickListener() {
@@ -174,10 +176,10 @@ gradle接入
                         return false;
                     }
                 });
-        
+        ```
 ## 开源协议
 ```
-Copyright Kongzue DialogV3
+Copyright jkdsking IosPopup
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
