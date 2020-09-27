@@ -1,7 +1,6 @@
-# IosPopup
-Ios样式弹窗
+# ios效果弹窗
 
-## 首先感谢源库 https://github.com/kongzue/DialogV3 
+## 首先感谢源库  https://github.com/kongzue/DialogV3 
 
 ## 注意：目前不支持横竖屏幕切换显示   activity必须要继承AppCompatActivity
 
