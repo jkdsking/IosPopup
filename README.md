@@ -1,8 +1,13 @@
-# IosPopup
-Ios样式弹窗
-![image](https://github.com/jkdsking/IosPopup/blob/master/png/main.jpg)![image](https://github.com/jkdsking/IosPopup/blob/master/png/message.jpg)![image](https://github.com/jkdsking/IosPopup/blob/master/png/message_ver.jpg)![image](https://github.com/jkdsking/IosPopup/blob/master/png/select.jpg)![image](https://github.com/jkdsking/IosPopup/blob/master/png/input.jpg)![image](https://github.com/jkdsking/IosPopup/blob/master/png/wait.jpg)![image](https://github.com/jkdsking/IosPopup/blob/master/png/warn.jpg)![image](https://github.com/jkdsking/IosPopup/blob/master/png/buttom.jpg)![image](https://github.com/jkdsking/IosPopup/blob/master/png/buttom_menu.jpg)![image](https://github.com/jkdsking/IosPopup/blob/master/png/error.jpg)![image](https://github.com/jkdsking/IosPopup/blob/master/png/share.jpg)
-gradle接入
+## ios效果弹窗
 
+## 首先感谢源库  https://github.com/kongzue/DialogV3 
+
+## 注意：目前不支持横竖屏幕切换显示   activity必须要继承AppCompatActivity
+
+![image](https://github.com/jkdsking/IosPopup/blob/master/png/main.jpg)![image](https://github.com/jkdsking/IosPopup/blob/master/png/message.jpg)![image](https://github.com/jkdsking/IosPopup/blob/master/png/message_ver.jpg)![image](https://github.com/jkdsking/IosPopup/blob/master/png/select.jpg)![image](https://github.com/jkdsking/IosPopup/blob/master/png/input.jpg)![image](https://github.com/jkdsking/IosPopup/blob/master/png/wait.jpg)![image](https://github.com/jkdsking/IosPopup/blob/master/png/warn.jpg)![image](https://github.com/jkdsking/IosPopup/blob/master/png/buttom.jpg)![image](https://github.com/jkdsking/IosPopup/blob/master/png/buttom_menu.jpg)![image](https://github.com/jkdsking/IosPopup/blob/master/png/error.jpg)![image](https://github.com/jkdsking/IosPopup/blob/master/png/share.jpg)
+ 
+   ## gradle接入
+	
 	allprojects {
 		repositories {
 			...
@@ -14,9 +19,12 @@ gradle接入
 	        implementation 'com.github.jkdsking:IosPopup:1.0.1'
 	}
  
-  具体使用Application里面
-             
-	     public class App extends Application {
+  
+ 
+
+  
+  ## 具体使用Application里面           
+    public class App extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
@@ -30,9 +38,10 @@ gradle接入
     }
       
       
-   弹窗使用 具体代码  
+  ## 弹窗使用 具体代码
+ 
   	 	
-		  //消息
+		                  //消息
                 MessageDialog.show(MainActivity.this, "标题", "这是一条消息", "确定").setOnOkButtonClickListener(new OnDialogButtonClickListener() {
                     @Override
                     public boolean onClick(BaseDialog baseDialog, View v) {
@@ -41,10 +50,9 @@ gradle接入
                     }
                 });
 		 
-		 //纵向消息
-                MessageDialog
-                        .show(MainActivity.this, "纵向排列", "这是一条纵向消息", "确定", "取消", "其他")
-                        .setButtonOrientation(LinearLayout.VERTICAL).setOnOkButtonClickListener(new OnDialogButtonClickListener() {
+		                //纵向消息
+                MessageDialog.show(MainActivity.this, "纵向排列", "这是一条纵向消息", "确定", "取消", "其他")
+                     .setButtonOrientation(LinearLayout.VERTICAL).setOnOkButtonClickListener(new OnDialogButtonClickListener() {
                     @Override
                     public boolean onClick(BaseDialog baseDialog, View v) {
                         Toast.makeText(MainActivity.this, "点击确定", Toast.LENGTH_SHORT).show();
@@ -58,7 +66,7 @@ gradle接入
                     }
                 });
 		    
-		    //选择
+		              //选择
 		  MessageDialog.show(MainActivity.this, "标题", "你要做什么事", "确定", "取消").setOnOkButtonClickListener(new OnDialogButtonClickListener() {
                     @Override
                     public boolean onClick(BaseDialog baseDialog, View v) {
@@ -68,7 +76,7 @@ gradle接入
                     }
                 });
                   
-		  //输入
+		             //输入
                 InputDialog.build(MainActivity.this)
                         //.setButtonTextInfo(new TextInfo().setFontColor(Color.GREEN))
                         .setTitle("提示").setMessage("请输入密码（123456）")
@@ -169,4 +177,20 @@ gradle接入
                         return false;
                     }
                 });
-                
+        
+ ## 开源协议
+```
+Copyright jkdsking IosPopup
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+```        
