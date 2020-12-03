@@ -100,7 +100,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.btn_select:
                 //选择
-                MessageDialog.show(MainActivity.this, "标题", "你要做什么事", "确定", "取消").setOnOkButtonClickListener(new OnDialogButtonClickListener() {
+                MessageDialog.show(MainActivity.this, "温馨提示", "确定切换城市到北京市", "确定", "取消").setOnOkButtonClickListener(new OnDialogButtonClickListener() {
                     @Override
                     public boolean onClick(BaseDialog baseDialog, View v) {
 
