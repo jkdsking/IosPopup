@@ -16,7 +16,10 @@
 	}
 	
 	dependencies {
+		 //加载中为默认样式（1.0.2）
 	        implementation 'com.github.jkdsking:IosPopup:1.0.2'
+		//加载中为ios菊花样式（1.0.4）
+		implementation 'com.github.jkdsking:IosPopup:1.0.4' 
 	}
  
   
