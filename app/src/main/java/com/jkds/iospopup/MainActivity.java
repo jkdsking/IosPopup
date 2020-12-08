@@ -29,7 +29,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private Button btn_msg,btn_vermsg,btn_select,btn_input,btn_wait,btn_wait_tips,btn_wait_warning,btn_bottom_menu,btn_bottom_menu_title,btn_wait_error,btn_share;
+    private Button btn_msg,btn_vermsg,btn_select,btn_input,btn_wait,btn_wait_tips,btn_wait_warning,btn_bottom_menu,btn_bottom_menu_title,btn_wait_error,btn_share,btn_wait_jh;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +50,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_bottom_menu_title=findViewById(R.id.btn_bottom_menu_title);
         btn_wait_error=findViewById(R.id.btn_wait_error);
         btn_share=findViewById(R.id.btn_share);
+        btn_wait_jh=findViewById(R.id.btn_wait_jh);
+        btn_wait_jh.setOnClickListener(this);
         btn_msg.setOnClickListener(this);
         btn_select.setOnClickListener(this);
         btn_input.setOnClickListener(this);
@@ -100,7 +102,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.btn_select:
                 //选择
-                MessageDialog.show(MainActivity.this, "温馨提示", "确定切换城市到北京市", "确定", "取消").setOnOkButtonClickListener(new OnDialogButtonClickListener() {
+                MessageDialog.show(MainActivity.this, "温馨提示", "定位显示你在广州市,是否切换到广州市", "确定", "取消").setOnOkButtonClickListener(new OnDialogButtonClickListener() {
                     @Override
                     public boolean onClick(BaseDialog baseDialog, View v) {
 
@@ -110,6 +112,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 });
 
                 break;
+
+
             case R.id.btn_input:
                 //输入
                 InputDialog.build(MainActivity.this)
@@ -154,6 +158,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 WaitDialog.dismiss(2500);
 
                 break;
+
+            case R.id.btn_wait_jh:
+
+
+
+                break;
+
             case R.id.btn_wait_tips:
                 //等待加提示
 

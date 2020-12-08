@@ -313,9 +313,10 @@ public class TipDialog extends BaseDialog {
                     bkgResId = R.drawable.rect_dark;
                     int lightColor = Color.rgb(255, 255, 255);
                     blurFrontColor = Color.argb(blurAlpha, 0, 0, 0);
-                    if (progress != null) {
-                        progress.setup(R.color.white);
-                    }
+//                    if (progress != null) {
+//                        progress.setup(R.color.white);
+//                        progress.setup(R.mipmap.img_progress_ios_dark);
+//                    }
                     txtInfo.setTextColor(lightColor);
                     if (type != null) {
                         boxProgress.setVisibility(View.GONE);

@@ -45,6 +45,14 @@
             android:text="等待" />
 
         <Button
+            android:id="@+id/btn_wait_jh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="等待(菊花)"
+            android:visibility="gone"
+            />
+
+        <Button
             android:id="@+id/btn_wait_tips"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
