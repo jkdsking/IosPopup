@@ -16,4 +16,11 @@
     <declare-styleable name="CircularProgress">
         <attr name="borderWidth" format="dimension" />
     </declare-styleable>
+
+
+    <declare-styleable name="ChrysanthemumLoadingView">
+        <attr name="pathColor" format="color"/>
+        <attr name="segmentLength" format="dimension"/>
+        <attr name="segmentWidth" format="dimension"/>
+    </declare-styleable>
 </resources>

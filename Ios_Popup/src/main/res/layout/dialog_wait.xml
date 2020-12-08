@@ -40,12 +40,13 @@
                     android:visibility="gone"
                     />
 
-                <ProgressBar
-                    android:id="@+id/progressBar"
+                <com.jkds.dialog.util.view.IOSLoadingView
                     android:layout_width="55dp"
                     android:layout_height="55dp"
-                    android:layout_centerInParent="true"
-                    android:indeterminateDrawable="@drawable/anim" />
+                    android:layout_centerHorizontal="true"
+                    app:pathColor="#fff"
+                    app:segmentLength="10dp"
+                    app:segmentWidth="3dp" />
 
 
             </RelativeLayout>
