@@ -16,7 +16,7 @@
 	}
 	
 	dependencies {
-	        implementation 'com.github.jkdsking:IosPopup:1.0.1'
+	        implementation 'com.github.jkdsking:IosPopup:1.0.2'
 	}
  
   
