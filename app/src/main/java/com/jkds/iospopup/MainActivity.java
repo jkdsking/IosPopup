@@ -8,6 +8,7 @@ import android.os.Handler;
 import android.text.InputType;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
@@ -18,6 +19,7 @@ import com.jkds.dialog.interfaces.OnMenuItemClickListener;
 import com.jkds.dialog.util.BaseDialog;
 import com.jkds.dialog.util.InputInfo;
 import com.jkds.dialog.v3.BottomMenu;
+import com.jkds.dialog.v3.CustomDialog;
 import com.jkds.dialog.v3.InputDialog;
 import com.jkds.dialog.v3.MessageDialog;
 import com.jkds.dialog.v3.ShareDialog;
@@ -160,7 +162,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.btn_wait_jh:
+                //对于未实例化的布局：
+                //完全自定义对话框
+                        CustomDialog.build(MainActivity.this, R.layout.layout_custom_dialog, new CustomDialog.OnBindView() {
+                            @Override
+                            public void onBind(final CustomDialog dialog, View v) {
+                                ImageView btnOk = v.findViewById(R.id.btn_ok);
 
+                                btnOk.setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View v) {
+                                        dialog.doDismiss();
+                                    }
+                                });
+                            }
+                        })
+//                        .setCustomLayoutParams(new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT))
+//                        .setAlign(CustomDialog.ALIGN.DEFAULT)
+//                        .setCancelable(false)
+                                .setFullScreen(true)
+                                .show();
 
 
                 break;
