@@ -183,8 +183,9 @@
                     }
                 });
 		
-		//自定义view弹窗
-		      @Override
+		 //完全自定义对话框
+                CustomDialog.build(MainActivity.this, R.layout.layout_custom_dialog, new CustomDialog.OnBindView() {
+                    @Override
                     public void onBind(final CustomDialog dialog, View v) {
                         ImageView btnOk = v.findViewById(R.id.btn_ok);
 
