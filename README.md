@@ -20,6 +20,8 @@
 	        implementation 'com.github.jkdsking:IosPopup:1.0.2'
 		//加载中为ios菊花样式（1.0.4）
 		implementation 'com.github.jkdsking:IosPopup:1.0.4' 
+		//添加自定义view弹窗
+		implementation 'com.github.jkdsking:IosPopup:1.0.5' 
 	}
  
   
@@ -180,6 +182,21 @@
                         return false;
                     }
                 });
+		
+		 //完全自定义对话框
+                CustomDialog.build(MainActivity.this, R.layout.layout_custom_dialog, new CustomDialog.OnBindView() {
+                    @Override
+                    public void onBind(final CustomDialog dialog, View v) {
+                        ImageView btnOk = v.findViewById(R.id.btn_ok);
+
+                        btnOk.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                dialog.doDismiss();
+                            }
+                        });
+                    }
+                }).setFullScreen(true).show();
         
  ## 开源协议
 ```
