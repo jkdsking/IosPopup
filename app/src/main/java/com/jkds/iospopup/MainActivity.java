@@ -31,7 +31,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private Button btn_msg,btn_vermsg,btn_select,btn_input,btn_wait,btn_wait_tips,btn_wait_warning,btn_bottom_menu,btn_bottom_menu_title,btn_wait_error,btn_share,btn_wait_jh;
+    private Button btn_msg, btn_vermsg, btn_select, btn_input, btn_wait, btn_wait_tips, btn_wait_warning, btn_bottom_menu, btn_bottom_menu_title, btn_wait_error, btn_share, btn_wait_jh;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,18 +41,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void initView() {
-        btn_msg=findViewById(R.id.btn_msg);
-        btn_vermsg=findViewById(R.id.btn_vermsg);
-        btn_select=findViewById(R.id.btn_select);
-        btn_input=findViewById(R.id.btn_input);
-        btn_wait=findViewById(R.id.btn_wait);
-        btn_wait_tips=findViewById(R.id.btn_wait_tips);
-        btn_wait_warning=findViewById(R.id.btn_wait_warning);
-        btn_bottom_menu=findViewById(R.id.btn_bottom_menu);
-        btn_bottom_menu_title=findViewById(R.id.btn_bottom_menu_title);
-        btn_wait_error=findViewById(R.id.btn_wait_error);
-        btn_share=findViewById(R.id.btn_share);
-        btn_wait_jh=findViewById(R.id.btn_wait_jh);
+        btn_msg = findViewById(R.id.btn_msg);
+        btn_vermsg = findViewById(R.id.btn_vermsg);
+        btn_select = findViewById(R.id.btn_select);
+        btn_input = findViewById(R.id.btn_input);
+        btn_wait = findViewById(R.id.btn_wait);
+        btn_wait_tips = findViewById(R.id.btn_wait_tips);
+        btn_wait_warning = findViewById(R.id.btn_wait_warning);
+        btn_bottom_menu = findViewById(R.id.btn_bottom_menu);
+        btn_bottom_menu_title = findViewById(R.id.btn_bottom_menu_title);
+        btn_wait_error = findViewById(R.id.btn_wait_error);
+        btn_share = findViewById(R.id.btn_share);
+        btn_wait_jh = findViewById(R.id.btn_wait_jh);
         btn_wait_jh.setOnClickListener(this);
         btn_msg.setOnClickListener(this);
         btn_select.setOnClickListener(this);
@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
 
             case R.id.btn_msg:
                 //消息
@@ -162,26 +162,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.btn_wait_jh:
-                //对于未实例化的布局：
                 //完全自定义对话框
-                        CustomDialog.build(MainActivity.this, R.layout.layout_custom_dialog, new CustomDialog.OnBindView() {
-                            @Override
-                            public void onBind(final CustomDialog dialog, View v) {
-                                ImageView btnOk = v.findViewById(R.id.btn_ok);
+                CustomDialog.build(MainActivity.this, R.layout.layout_custom_dialog, new CustomDialog.OnBindView() {
+                    @Override
+                    public void onBind(final CustomDialog dialog, View v) {
+                        ImageView btnOk = v.findViewById(R.id.btn_ok);
 
-                                btnOk.setOnClickListener(new View.OnClickListener() {
-                                    @Override
-                                    public void onClick(View v) {
-                                        dialog.doDismiss();
-                                    }
-                                });
+                        btnOk.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                dialog.doDismiss();
                             }
-                        })
-//                        .setCustomLayoutParams(new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT))
-//                        .setAlign(CustomDialog.ALIGN.DEFAULT)
-//                        .setCancelable(false)
-                                .setFullScreen(true)
-                                .show();
+                        });
+                    }
+                }).setFullScreen(true).show();
 
 
                 break;
@@ -218,7 +212,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.btn_bottom_menu:
                 //底部菜单
-                BottomMenu.show(MainActivity.this, new String[]{"菜单1", "菜单2", "菜单3","菜单1", "菜单2", "菜单3","菜单1", "菜单2", "菜单3","菜单1", "菜单2", "菜单3","菜单1", "菜单2", "菜单3","菜单1", "菜单2", "菜单3","菜单1", "菜单2", "菜单3","菜单1", "菜单2", "菜单3"}, new OnMenuItemClickListener() {
+                BottomMenu.show(MainActivity.this, new String[]{"菜单1", "菜单2", "菜单3", "菜单1", "菜单2", "菜单3", "菜单1", "菜单2", "菜单3", "菜单1", "菜单2", "菜单3", "菜单1", "菜单2", "菜单3", "菜单1", "菜单2", "菜单3", "菜单1", "菜单2", "菜单3", "菜单1", "菜单2", "菜单3"}, new OnMenuItemClickListener() {
                     @Override
                     public void onClick(String text, int index) {
                         Toast.makeText(MainActivity.this, text, Toast.LENGTH_SHORT).show();
@@ -229,7 +223,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.btn_bottom_menu_title:
                 //底部菜单加标题
-                BottomMenu.show(MainActivity.this, new String[]{"菜单1", "菜单2", "菜单3","菜单1", "菜单2", "菜单3","菜单1", "菜单2", "菜单3","菜单1", "菜单2", "菜单3","菜单1", "菜单2", "菜单3","菜单1", "菜单2", "菜单3","菜单1", "菜单2", "菜单3","菜单1", "菜单2", "菜单3","菜单1", "菜单2", "菜单3","菜单1", "菜单2", "菜单3","菜单1", "菜单2", "菜单3","菜单1", "菜单2", "菜单3","菜单1", "菜单2", "菜单3"}, new OnMenuItemClickListener() {
+                BottomMenu.show(MainActivity.this, new String[]{"菜单1", "菜单2", "菜单3", "菜单1", "菜单2", "菜单3", "菜单1", "菜单2", "菜单3", "菜单1", "菜单2", "菜单3", "菜单1", "菜单2", "菜单3", "菜单1", "菜单2", "菜单3", "菜单1", "菜单2", "菜单3", "菜单1", "菜单2", "菜单3", "菜单1", "菜单2", "菜单3", "菜单1", "菜单2", "菜单3", "菜单1", "菜单2", "菜单3", "菜单1", "菜单2", "菜单3", "菜单1", "菜单2", "菜单3"}, new OnMenuItemClickListener() {
                     @Override
                     public void onClick(String text, int index) {
                         Toast.makeText(MainActivity.this, text, Toast.LENGTH_SHORT).show();
@@ -251,12 +245,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_share:
                 //分享
                 List<ShareDialog.Item> itemList = new ArrayList<>();
-                itemList.add(new ShareDialog.Item(MainActivity.this ,R.mipmap.img_email_ios,"邮件"));
-                itemList.add(new ShareDialog.Item(MainActivity.this ,R.mipmap.img_qq_ios,"QQ"));
-                itemList.add(new ShareDialog.Item(MainActivity.this ,R.mipmap.img_wechat_ios,"微信"));
-                itemList.add(new ShareDialog.Item(MainActivity.this ,R.mipmap.img_weibo_ios,"微博"));
-                itemList.add(new ShareDialog.Item(MainActivity.this ,R.mipmap.img_memorandum_ios,"添加到“备忘录”"));
-                itemList.add(new ShareDialog.Item(MainActivity.this ,R.mipmap.img_remind_ios,"提醒事项"));
+                itemList.add(new ShareDialog.Item(MainActivity.this, R.mipmap.img_email_ios, "邮件"));
+                itemList.add(new ShareDialog.Item(MainActivity.this, R.mipmap.img_qq_ios, "QQ"));
+                itemList.add(new ShareDialog.Item(MainActivity.this, R.mipmap.img_wechat_ios, "微信"));
+                itemList.add(new ShareDialog.Item(MainActivity.this, R.mipmap.img_weibo_ios, "微博"));
+                itemList.add(new ShareDialog.Item(MainActivity.this, R.mipmap.img_memorandum_ios, "添加到“备忘录”"));
+                itemList.add(new ShareDialog.Item(MainActivity.this, R.mipmap.img_remind_ios, "提醒事项"));
                 ShareDialog.show(MainActivity.this, itemList, new ShareDialog.OnItemClickListener() {
                     @Override
                     public boolean onClick(ShareDialog shareDialog, int index, ShareDialog.Item item) {
@@ -266,8 +260,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 });
 
                 break;
-
-
 
 
         }
