@@ -1,5 +1,4 @@
 package com.jkds.iospopup;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
@@ -28,11 +27,8 @@ import com.jkds.dialog.v3.WaitDialog;
 
 import java.util.ArrayList;
 import java.util.List;
-
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-
     private Button btn_msg, btn_vermsg, btn_select, btn_input, btn_wait, btn_wait_tips, btn_wait_warning, btn_bottom_menu, btn_bottom_menu_title, btn_wait_error, btn_share, btn_wait_jh;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -115,7 +111,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 break;
 
-
             case R.id.btn_input:
                 //输入
                 InputDialog.build(MainActivity.this)
@@ -149,9 +144,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.btn_wait:
-
                 //等待
-
                 WaitDialog.show(MainActivity.this, "请稍后...").setOnDismissListener(new OnDismissListener() {
                     @Override
                     public void onDismiss() {
@@ -160,26 +153,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 WaitDialog.dismiss(2500);
 
                 break;
-
             case R.id.btn_wait_jh:
                 //完全自定义对话框
                 CustomDialog.build(MainActivity.this, R.layout.layout_custom_dialog, new CustomDialog.OnBindView() {
                     @Override
                     public void onBind(final CustomDialog dialog, View v) {
                         ImageView btnOk = v.findViewById(R.id.btn_ok);
-
                         btnOk.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
                                 dialog.doDismiss();
+
                             }
                         });
                     }
-                }).setFullScreen(true).show();
-
-
+                }).setFullScreen(true).setAlign(BaseDialog.ALIGN.BOTTOM).show();
                 break;
-
             case R.id.btn_wait_tips:
                 //等待加提示
 
