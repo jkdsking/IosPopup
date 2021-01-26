@@ -22,6 +22,8 @@
 		implementation 'com.github.jkdsking:IosPopup:1.0.4' 
 		//添加自定义view弹窗
 		implementation 'com.github.jkdsking:IosPopup:1.0.5' 
+		//修改圆角弧度为5dp
+		implementation 'com.github.jkdsking:IosPopup:1.0.6' 
 	}
  
   
