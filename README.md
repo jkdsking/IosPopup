@@ -25,6 +25,9 @@
 		//修改圆角弧度为5dp
 		implementation 'com.github.jkdsking:IosPopup:1.0.6' 
 	}
+    
+    或者
+    implementation 'com.jkds:Ios_Popup:1.0.1'(不用添加上面的jitpack库，等于1.0.6版本)
  
   
  
